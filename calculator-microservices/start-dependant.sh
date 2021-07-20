@@ -9,7 +9,7 @@ cd ..
 
 echo "Starting the 'multiplier' project "
 cd multiplier
-./mvnw quarkus:dev &
+./mvnw quarkus:dev -Ddebug=5006 &
 MULTIPLIER_PID=$!
 sleep 5
 cd ..
