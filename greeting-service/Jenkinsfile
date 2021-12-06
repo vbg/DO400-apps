@@ -2,7 +2,7 @@ pipeline{
     agent{
         label "nodejs"
     }
-    environment { WORKSPACE='${WORKSPACE}/greeting-service' }
+    environment { WORKSPACE='/tmp/workspace/greeting-service-deployment/greeting-service' }
     stages{
         stage("Install dependencies"){
             steps{
