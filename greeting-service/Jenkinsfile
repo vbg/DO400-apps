@@ -3,7 +3,7 @@ pipeline{
         label "nodejs"
     }
     environment {
-          PWD = '${PWD}/greeting-service'
+          WORKSPACE = 'env.WORKSPACE/greeting-service'
     }
     stages{
         stage("Install dependencies"){
