@@ -5,20 +5,26 @@ pipeline{
     stages{
         stage("Install dependencies"){
             steps{
+               dir('greeting-service') {
                    sh 'npm ci'
+               }
             }
         }
 
         stage("Check Style"){
             steps{
+               dir('greeting-service') {
                 sh "pwd"
                 sh "npm run lint"
+               }
             }
         }
 
         stage("Test"){
             steps{
+               dir('greeting-service') {
                 sh "npm test"
+               }
             }
         }
         stage("Deploy"){
