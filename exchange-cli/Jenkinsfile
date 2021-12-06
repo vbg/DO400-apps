@@ -13,9 +13,11 @@ pipeline {
      }
 
     stage('Build App') {
+       steps {
          dir('exchange-cli') {
            sh "npm run build"
          }
+       }
     }
 
    }
