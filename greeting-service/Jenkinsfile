@@ -2,11 +2,10 @@ pipeline{
     agent{
         label "nodejs"
     }
-    environment { WORKSPACE='/tmp/workspace/greeting-service-deployment/greeting-service' }
     stages{
         stage("Install dependencies"){
             steps{
-                   sh "npm ci"
+                   sh 'npm ci'
             }
         }
 
