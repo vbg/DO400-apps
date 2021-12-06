@@ -1,6 +1,7 @@
 pipeline{
     agent{
         label "nodejs"
+        dir "${WORKSPACE}/greeting-service"
     }
     environment {
           WORKSPACE = "${WORKSPACE}/greeting-service"
