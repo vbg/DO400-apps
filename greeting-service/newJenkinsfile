@@ -1,0 +1,14 @@
+pipeline {
+   agent any
+
+   stages {
+     stage('Deploy') {
+       steps {
+         sh '''
+           oc project mdnzcl-deploy-strategies
+           oc start-build greeting-service --follow --wait 
+         '''
+       }
+     }
+   }
+}
