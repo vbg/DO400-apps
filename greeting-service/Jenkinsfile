@@ -5,6 +5,7 @@ pipeline{
     stages{
         stage("Install dependencies"){
             steps{
+                   sh '${WORKSPACE}'
                    sh 'npm ci'
             }
         }
