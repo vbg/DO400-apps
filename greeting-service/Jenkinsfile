@@ -5,8 +5,9 @@ pipeline{
     stages{
         stage("Install dependencies"){
             steps{
-		dir('greeting-service')
-                sh "npm ci"
+		dir('greeting-service') {
+                   sh "npm ci"
+                }
             }
         }
 
