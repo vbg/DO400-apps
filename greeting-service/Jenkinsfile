@@ -8,8 +8,7 @@ pipeline{
     stages{
         stage("Install dependencies"){
             steps{
-                   sh 'echo env.WORKSPACE'
-                   sh 'echo ${workspace}'
+                   sh 'printenv'
                    sh 'npm ci'
             }
         }
